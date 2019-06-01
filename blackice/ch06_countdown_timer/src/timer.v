@@ -4,8 +4,8 @@ module timer(
     input switch_dn,
     input switch_cancel,
     input switch_start_stop,
-    output [7:0] SEG1,
-    output [7:0] SEG2,
+    output [6:0] SEG1,
+    output [6:0] SEG2,
     output [1:0] DIGIT,
     output BUZZER
     );
