@@ -1,3 +1,5 @@
+`default_nettype none
+
 module vga(
     input CLK,  //mystorm 100MHz
     output HS, VS,

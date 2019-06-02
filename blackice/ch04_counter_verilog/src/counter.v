@@ -1,3 +1,5 @@
+`default_nettype none
+
 module counter(
     input Clock,
     output reg [3:0] Q

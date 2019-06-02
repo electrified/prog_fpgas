@@ -1,3 +1,5 @@
+`default_nettype none
+
 module data_selector (
   input A,
   input B,

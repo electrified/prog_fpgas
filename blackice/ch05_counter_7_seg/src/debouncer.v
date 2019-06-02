@@ -1,3 +1,5 @@
+`default_nettype none
+
 module debouncer(
     input CLK,
     input switch_input,

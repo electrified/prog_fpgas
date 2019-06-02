@@ -1,3 +1,5 @@
+`default_nettype none
+
 module pwm(
     input pwm_clk,
     input [7:0] duty,

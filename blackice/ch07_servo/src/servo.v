@@ -1,3 +1,5 @@
+`default_nettype none
+
 module servo(
     input CLK,
     input [15:0] pulse_len,  // microseconds

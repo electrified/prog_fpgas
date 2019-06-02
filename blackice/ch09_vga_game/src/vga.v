@@ -1,3 +1,5 @@
+`default_nettype none
+
 module vga(
     input CLK,  // Papilio 32MHz
     output HS, VS,

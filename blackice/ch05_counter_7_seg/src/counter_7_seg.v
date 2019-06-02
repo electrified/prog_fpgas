@@ -1,3 +1,5 @@
+`default_nettype none
+
 module counter_7_seg(
     input CLK,
     input switch_up,

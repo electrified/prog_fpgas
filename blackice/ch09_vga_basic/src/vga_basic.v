@@ -1,3 +1,5 @@
+`default_nettype none
+
 module vga_basic(
     input CLK,
     output HS,

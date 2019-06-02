@@ -1,3 +1,5 @@
+`default_nettype none
+
 module timer(
     input CLK,
     input switch_up,

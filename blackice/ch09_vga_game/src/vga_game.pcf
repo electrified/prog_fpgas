@@ -34,11 +34,11 @@ set_io BLUE[0]    18 # PMOD36 = PMOD 9/10 pin 12
 set_io HS       8 # PMOD28 = PMOD  7/8 pin 12
 set_io VS       7 # PMOD29 = PMOD  7/8 pin 10
 
-//buttons
+# buttons
 set_io left_switch 63
 set_io right_switch 64
 
-//right pair of switches
+# right pair of switches
 set_io dn_switch 41
 set_io up_switch 39
 

@@ -1,3 +1,5 @@
+`default_nettype none
+
 module pwm_tester(
     input CLK,
     input switch_up,

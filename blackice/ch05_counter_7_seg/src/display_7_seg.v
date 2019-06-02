@@ -1,3 +1,5 @@
+`default_nettype none
+
 module display_7_seg(
     input CLK,
     input [3:0] units, tens,

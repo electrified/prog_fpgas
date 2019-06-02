@@ -1,3 +1,5 @@
+`default_nettype none
+
 module vga_mem(
     input CLK,
     output HS,
@@ -12,9 +14,10 @@ wire [9:0] x, y;
 reg [7:0] mem[4799:0]; // 80 x 60 (8x8 pixels on 640x480)
 wire [12:0] mem_index;
 wire [7:0] color;
+wire blank;
 
 initial begin
-  $readmemh("flag.txt", mem);
+  $readmemh("../flag.txt", mem);
 end
 
 vga v(.CLK (CLK), .HS (HS), .VS (VS), .x (x), .y (y), .blank (blank));

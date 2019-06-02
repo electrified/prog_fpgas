@@ -1,3 +1,5 @@
+`default_nettype none
+
 module seg_test(
    input CLK,
    input [3:0] D,

@@ -1,3 +1,5 @@
+`default_nettype none
+
 module alarm(
     input CLK,
     input enable,

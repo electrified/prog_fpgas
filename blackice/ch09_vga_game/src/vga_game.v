@@ -1,3 +1,5 @@
+`default_nettype none
+
 module vga_game(
     input CLK,
     input up_switch,
@@ -6,9 +8,9 @@ module vga_game(
     input right_switch,
     output HS,
     output VS,
-    output [2:0] RED,
-    output [2:0] GREEN,
-    output [1:0] BLUE
+    output [3:0] RED,
+    output [3:0] GREEN,
+    output [3:0] BLUE
     );
 
 wire [9:0] x, y;
