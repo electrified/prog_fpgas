@@ -25,7 +25,6 @@ set_io SEG2[4] 99
 set_io SEG2[5] 102
 set_io SEG2[6] 105
 
-
 set_io DIGIT[0] 1
 set_io SEG1[0] 2
 set_io SEG1[1] 9
@@ -35,8 +34,8 @@ set_io SEG1[4] 16
 set_io SEG1[5] 19
 set_io SEG1[6] 20
 
-set_io switch_cancel 138
-set_io switch_dn 136
-set_io switch_start_stop 64
-set_io switch_up 63
+set_io switch_cancel 29
+set_io switch_dn 28
+set_io switch_start_stop 24
+set_io switch_up 23
 
