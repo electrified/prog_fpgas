@@ -1,7 +1,7 @@
 `default_nettype none
 
 module vga(
-    input CLK,  // Papilio 32MHz
+    input CLK,  // BlackIce 100MHz
     output HS, VS,
     output [9:0] x,
     output reg [9:0] y,
@@ -11,11 +11,13 @@ module vga(
 reg [15:0] prescaler;
 
 reg [9:0] xc;
- 
-// Horizontal 640 + fp 16 + HS 96 + bp 48 = 800 pixel clocks
+
+//640 x 480 25.175Mhz pixel clock
+
+// Horizontal 640 + front porch 16 + Horiz sync pulse 96 + back porch 48 = 800 pixel clocks
 // Vertical, 480 + fp 11 lines + VS 2 lines + bp 31 lines = 524 lines
 assign blank = ((xc < 160) | (xc > 800) | (y > 479));
-assign HS = ~ ((xc > 16) & (xc < 112));
+assign HS = ~ ((xc > 16) & (xc < 112)); // == 96 sync pulse
 assign VS = ~ ((y > 491) & (y < 494));
 assign x = ((xc < 160)?0:(xc - 160));
 
@@ -24,7 +26,7 @@ begin
 
   prescaler <= prescaler + 1;
 
-  if (prescaler == 3)
+  if (prescaler == 3) // 100Mhz /4 = 25Mhz
   begin
     prescaler <= 0;
     if (xc == 800)
@@ -33,7 +35,7 @@ begin
       y <= y + 1;
     end
     else begin
-      xc <= xc + 2;
+      xc <= xc + 1;
     end
     if (y == 524)
     begin
