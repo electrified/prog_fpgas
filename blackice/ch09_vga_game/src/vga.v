@@ -1,7 +1,7 @@
 `default_nettype none
 
 module vga(
-    input CLK,  // Papilio 32MHz
+    input CLK,  // BlackIce 100MHz
     output HS, VS,
     output [9:0] x,
     output reg [9:0] y,
@@ -33,7 +33,7 @@ begin
       y <= y + 1;
     end
     else begin
-      xc <= xc + 2;
+      xc <= xc + 1;
     end
     if (y == 524)
     begin

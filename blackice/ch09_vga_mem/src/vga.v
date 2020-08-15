@@ -33,7 +33,7 @@ begin
       y <= y + 1;
     end
     else begin
-      xc <= xc + 2;
+      xc <= xc + 1;
     end
     if (y == 524)
     begin
